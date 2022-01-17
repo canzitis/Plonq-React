@@ -1,0 +1,150 @@
+{
+  "data": {
+    "header": {
+      "logoCompany": "/images/header/Logo.png",
+      "navlinks": [
+        {
+          "name": "Продукты",
+          "href": "",
+          "id": 0
+        },
+        {
+          "name": "Приложение",
+          "href": "",
+          "id": 1
+        },
+        {
+          "name": "Дистрибуция",
+          "href": "",
+          "id": 2
+        },
+        {
+          "name": "Где купить",
+          "href": "",
+          "id": 3
+        }
+      ]
+    },
+    "home": {
+      "imagePlonq": "/images/home/imagePlonq.png",
+      "imageNew": "/images/home/New.png",
+      "imageLogo": "/images/home/Logo.png",
+      "Image500": "/images/home/500.png",
+      "descriptionHome": "Новый стандарт одноразовых е-сигарет.",
+      "homeButtons": [
+        {
+          "textButtons": "Подробнее",
+          "href": ""
+        },
+        {
+          "textButtons": "Где купить",
+          "href": ""
+        }
+      ],
+      "plonqX": {
+        "plonqLogo": "/images/plonqX/Plonq_X_logo.png",
+        "plonqXMobile": "/images/plonqX/PlonqXMobile.png",
+        "description": "Электронная сигарета, которая умеет удивлять.",
+        "plonqXButton": {
+          "textMore": "Подробнее",
+          "hrefMore": ""
+        },
+        "textOnSaleSoon": "Скоро в продаже"
+      },
+      "catalog": [
+        {
+          "imgItem": "/images/PlonqProductCatalog/plonq400/image_Plonq_400.png",
+          "imgTitle": "/images/PlonqProductCatalog/plonq400/400.png",
+          "description": "Одноразовое устройство Plonq на 400 затяжек",
+          "price": "370 ₽",
+          "href": ""
+        },
+        {
+          "imgItem": "/images/PlonqProductCatalog/plonq500/image_Plonq_500.png",
+          "imgTitle": "/images/PlonqProductCatalog/plonq500/500.png",
+          "description": "Одноразовое устройство Plonq на 500 затяжек",
+          "price": "430 ₽",
+          "href": ""
+        },
+        {
+          "imgItem": "/images/PlonqProductCatalog/plonqX/image_Plonq_X.png",
+          "imgTitle": "/images/PlonqProductCatalog/plonqX/x.png",
+          "description": "Стартовый набор Plonq X"
+        },
+        {
+          "imgItem": "/images/PlonqProductCatalog/plonqX2/image_Plonq_Pod.png",
+          "imgTitle": "/images/PlonqProductCatalog/plonqX2/x.png",
+          "description": "Два сменных картриджа для устройства Plonq X"
+        }
+      ],
+      "map": {
+        "text": "Найдите Plonq</br> среди <span>4244</span> магазинов",
+        "href": ""
+      },
+      "aboutProduct": [
+        {
+          "title": "Об электронных сигаретах",
+          "description": "Plonq — электронный испаритель, который преобразует жидкость в пар.",
+          "href": "",
+          "img": "/images/AboutProduct/image_leak.png"
+        },
+        {
+          "title": "О приложении",
+          "description": "Plonq AI создан на основе поведенческой терапии, которая доказала свою эффективность.",
+          "href": "",
+          "img": "/images/AboutProduct/image_APP.png"
+        }
+      ],
+      "footer": {
+        "imgCompany": "",
+        "mobileShop": [
+          {
+            "imgMobile": "",
+            "title": "",
+            "description": ""
+          },
+          {
+            "imgMobile": "",
+            "title": "",
+            "description": ""
+          }
+        ],
+        "subscribeTitle": "",
+        "languages": {
+          "RU": "Ru",
+          "En": "En"
+        },
+        "blockDescriptionFooter": [
+          {
+            "products": "Продукты",
+            "productsItem1": "Plonq 400",
+            "productsItem2": "Plonq 500",
+            "productsItem3": "Plonq X"
+          },
+          {
+            "technologies": "Технологии",
+            "aboutTheApp": "О приложении",
+            "aboutElectronicCigarettes": "Об электронных сигаретах"
+          },
+          {
+            "support": "Поддержка",
+            "toContactUs": "Связаться с нами",
+            "returnConditions": "Условия возврата",
+            "politicsPrivacy": "Политика конфиденциальности"
+          },
+          {
+            "other": "Прочее",
+            "pointsOfSale": "Точки продаж",
+            "aboutCompany": "О компании",
+            "wholesaleBuyers": "Оптовым покупателям"
+          }
+        ],
+        "copyrightBox": {
+          "icoInsta": "",
+          "copyright": "© 2021 PLONQ LLC\n40900 Woodward Avenue Suite\n111 Bloomfield Hills\nMI 48304 USA"
+        },
+        "saleProhibited": "ПРОДАЖА НЕСОВЕРШЕННОЛЕТНИМ ЗАПРЕЩЕНА.\nСайт используется исключительно в целях информирования действующих потребителей продукции PLONQ\nЗащищено выпущенными и/или находящимися на одобрении международными патентами.. "
+      }
+    }
+  }
+}
