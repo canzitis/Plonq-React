@@ -29,3 +29,5 @@ const AboutProduct: React.FC<AboutProductProps> = ({aboutProduct}) => {
 }
 
 export default AboutProduct;
+
+

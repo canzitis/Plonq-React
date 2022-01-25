@@ -1,0 +1,70 @@
+import React, {MutableRefObject, useEffect, useRef, useState} from 'react';
+import {Container, LoadingBar, PreloaderImage, PreloaderProgress} from './Preloader.styled';
+
+
+interface PreloaderProps {
+    pageLoaded: boolean;
+    pageLoadedHandler: (pageLoaded: boolean) => void;
+}
+
+const Preloader: React.FC<PreloaderProps> = ({pageLoaded, pageLoadedHandler}) => {
+    const progressLoading: any = useRef();
+    const [loadingEnd, setLoadingEnd] = useState(false);
+
+
+    const ref = useRef() as MutableRefObject<HTMLDivElement>;
+
+    useEffect(() => {
+        if (!ref.current) return;
+
+        if (loadingEnd) {
+            document.body.classList.remove('stop-scroll');
+            if (document.documentElement.scrollTop) {
+                window.scrollTo({top: 0});
+            }
+            return;
+        }
+
+        document.body.classList.add('stop-scroll');
+        const progressElement = ref.current.querySelector('div');
+        const progressImg = ref.current.querySelector('img');
+
+        let progress = progressElement ? +progressElement.textContent! : 0;
+
+        const interval = () => {
+            if (!progressElement) return;
+
+            if (progress === 75 && pageLoaded) {
+                return;
+            }
+
+            ++progress;
+            progressElement.textContent = `${progress > 100 ? 100 : progress}`;
+            progressImg.style.opacity = `${progress * 0.01}`;
+            progressLoading.current.style.width = `${progress}%`;
+
+            if (progress >= 100) {
+                pageLoadedHandler(false);
+                clearInterval(timer);
+                setLoadingEnd(true);
+            }
+        };
+
+        const timer = setInterval(interval);
+
+        return () => clearInterval(timer);
+    }, [ref, loadingEnd, pageLoaded, pageLoadedHandler]);
+
+
+    return (
+        <Container ref={ref} loadingEnd={loadingEnd}>
+            <span>
+               <PreloaderImage src='/images/Preloader/smoke.png' alt={''} style={{opacity: 0}}/>
+                <PreloaderProgress>0</PreloaderProgress>
+                <LoadingBar ref={progressLoading}/>
+            </span>
+        </Container>
+    );
+};
+
+export default Preloader;
