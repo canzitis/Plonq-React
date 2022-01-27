@@ -15,7 +15,7 @@ export const MapText = styled.div`
   background: #F9F9F9;
   width: 100%;
   text-align: center;
-  padding-top: 455px;
+  padding-top: 36px;
   padding-bottom: 50px;
 
   p {
