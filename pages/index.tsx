@@ -1,28 +1,33 @@
 import Header from "../src/Components/Sections/Header/Header";
 import Home from "../src/Components/Sections/Home/Home";
-import React, {useState} from "react";
+import React, {useEffect} from "react";
 import Scroll from "../src/Components/SmoothScrollbar";
 import Footer from "../src/Components/Sections/Footer/Footer";
 import Preloader from "../src/Components/Common/Preloader/Preloader";
+import {PageLoaded} from "../src/recoil/atom";
+import {RecoilRoot, useSetRecoilState} from "recoil";
 
 interface IndexProps {
     data: any
 }
 
 const Index: React.FC<IndexProps> = ({data}) => {
-    const [page, setPageLoaded] = useState(false);
+    const setPageLoaded = useSetRecoilState(PageLoaded);
 
-    const pageLoadedHandler = (pageLoaded: boolean) => {
-        setPageLoaded(pageLoaded)
-    }
+    useEffect(() => {
+        setPageLoaded({
+            pageLoaded: true
+        })
+    })
     return (
         <>
             <Scroll/>
-            <Preloader pageLoaded={true} pageLoadedHandler={pageLoadedHandler}/>
+            <Preloader/>
             <Header header={data.header}/>
             <Home home={data.home}/>
             <Footer/>
         </>
+
     )
 }
 

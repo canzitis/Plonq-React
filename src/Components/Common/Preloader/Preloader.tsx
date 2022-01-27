@@ -1,15 +1,14 @@
 import React, {MutableRefObject, useEffect, useRef, useState} from 'react';
 import {Container, LoadingBar, PreloaderImage, PreloaderProgress} from './Preloader.styled';
+import {useRecoilValue, useSetRecoilState} from "recoil";
+import {PageLoaded} from "../../../recoil/atom";
 
 
-interface PreloaderProps {
-    pageLoaded: boolean;
-    pageLoadedHandler: (pageLoaded: boolean) => void;
-}
-
-const Preloader: React.FC<PreloaderProps> = ({pageLoaded, pageLoadedHandler}) => {
+const Preloader = () => {
     const progressLoading: any = useRef();
     const [loadingEnd, setLoadingEnd] = useState(false);
+    const pageLoaded = useRecoilValue(PageLoaded)
+    const setPageLoaded = useSetRecoilState(PageLoaded);
 
 
     const ref = useRef() as MutableRefObject<HTMLDivElement>;
@@ -34,7 +33,7 @@ const Preloader: React.FC<PreloaderProps> = ({pageLoaded, pageLoadedHandler}) =>
         const interval = () => {
             if (!progressElement) return;
 
-            if (progress === 75 && pageLoaded) {
+            if (progress === 75 && !pageLoaded) {
                 return;
             }
 
@@ -44,16 +43,20 @@ const Preloader: React.FC<PreloaderProps> = ({pageLoaded, pageLoadedHandler}) =>
             progressLoading.current.style.width = `${progress}%`;
 
             if (progress >= 100) {
-                pageLoadedHandler(false);
                 clearInterval(timer);
-                setLoadingEnd(true);
+                setPageLoaded(
+                    {
+                        pageLoaded: false
+                    }
+                );
+                setLoadingEnd(true)
             }
         };
 
         const timer = setInterval(interval);
 
         return () => clearInterval(timer);
-    }, [ref, loadingEnd, pageLoaded, pageLoadedHandler]);
+    }, [ref, loadingEnd, pageLoaded]);
 
 
     return (

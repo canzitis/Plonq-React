@@ -30,7 +30,7 @@ export const LoadingBar = styled.div`
     left: 0;
     height: 3px;
     transition: .1s;
-    background: #8fe9d4;
+    background: white;
 `;
 
 export const PreloaderProgress = styled.div`
@@ -43,7 +43,7 @@ export const PreloaderProgress = styled.div`
     font-weight: 600;
     font-size: 90px;
     line-height: 100%;
-    
+
     color: white;
     z-index: 2;
     top: 50%;
