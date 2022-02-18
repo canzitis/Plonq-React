@@ -5,7 +5,7 @@ import Scroll from "../src/Components/SmoothScrollbar";
 import Footer from "../src/Components/Sections/Footer/Footer";
 import Preloader from "../src/Components/Common/Preloader/Preloader";
 import {PageLoaded} from "../src/recoil/atom";
-import {RecoilRoot, useSetRecoilState} from "recoil";
+import { useSetRecoilState} from "recoil";
 
 interface IndexProps {
     data: any
@@ -13,7 +13,7 @@ interface IndexProps {
 
 const Index: React.FC<IndexProps> = ({data}) => {
     const setPageLoaded = useSetRecoilState(PageLoaded);
-
+    console.log(process.env.REACT_APP_API_KEY)
     useEffect(() => {
         setPageLoaded({
             pageLoaded: true

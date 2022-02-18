@@ -12,13 +12,8 @@ interface MapProps {
 }
 
 
-const API_KEY = process.env.REACT_APP_API_KEY
-const sf = process.env.SDGJA
-console.log(API_KEY)
-console.log(sf)
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY
 const Map: React.FC<MapProps> = ({map}) => {
-
-
     const {isLoaded} = useJsApiLoader({
         id: 'google-map-script',
         googleMapsApiKey: API_KEY,
