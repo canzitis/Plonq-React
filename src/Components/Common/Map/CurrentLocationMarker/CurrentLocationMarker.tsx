@@ -1,8 +1,11 @@
 import {Marker} from '@react-google-maps/api';
-import MarkerMap from "../MarkerMap/MarkerMap";
+import React from "react";
 
-const CurrentLocationMarker = ({position}) => {
-    return <Marker position={position} icon={{MarkerMap}} />
+interface CurrentLocationMarkerProps{
+    position:any,
 }
 
+const CurrentLocationMarker:React.FC<CurrentLocationMarkerProps> = ({position}) => {
+    return <Marker position={position} icon={{url: '/images/Map/marker.svg'}}/>
+}
 export default CurrentLocationMarker;

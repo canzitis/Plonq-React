@@ -2,6 +2,7 @@ import {Container} from "./MapGoogle.styled";
 import {GoogleMap} from "@react-google-maps/api";
 import {useCallback, useRef} from "react";
 import {MapTheme} from "./MapTheme";
+import CurrentLocationMarker from "./CurrentLocationMarker/CurrentLocationMarker";
 
 const containerStyle = {
     width: '100%',
@@ -48,6 +49,7 @@ const MapGoogle = () => {
             onUnmount={onUnmount}
             options={defaultOptions}
         >
+            <CurrentLocationMarker position={center}/>
         </GoogleMap>
     </Container>
 }

@@ -1,0 +1,5 @@
+<svg class="marker" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path d="M.37,256C.37,114.82,114.82.35,256,.35S511.64,114.83,511.63,256,397.18,511.65,256,511.65.35,397.18.37,256Z"
+          fill="black"/>
+    <text id="t2" x="12" y="65" fill="white" >Текст</text>
+</svg>
