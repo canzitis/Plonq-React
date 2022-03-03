@@ -13,28 +13,28 @@ export const FooterDataItems = styled.div`
 `
 
 export const FooterSubscribeWrapper = styled.div`
-    
-    div{
+
+    div {
         margin-top: 30px;
         display: flex;
         justify-content: space-between;
-        
-        input{
-        width: 430px;
-        height: 40px;
-        margin-right: 25px;
-        border: unset;
-        background: #f1f1f1;
-        border-radius: 4px;
-        font-size: 15px;
+
+        input {
+            width: 430px;
+            height: 40px;
+            margin-right: 25px;
+            border: unset;
+            background: #f1f1f1;
+            border-radius: 4px;
+            font-size: 15px;
         }
-        
-        button{
-        border: unset;
-        background: black;
-        color: white;
-        border-radius: 4px;
-        width: 150px;
+
+        button {
+            border: unset;
+            background: black;
+            color: white;
+            border-radius: 4px;
+            width: 150px;
         }
     }
 `
@@ -57,4 +57,26 @@ export const FooterLanguagesWrapper = styled.div`
             background: black;
         }
     }
+`
+export const FooterWrapperItems = styled.div`
+`
+
+export const FooterIconWrapper = styled.div`
+    & > :last-child {
+        margin-top: 30px;
+    }
+`
+
+export const FooterIconItem = styled.div`
+    width: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    h4 {
+        margin: 0;
+    }
+`
+
+export const FooterContentItems = styled.div`
 `
