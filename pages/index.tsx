@@ -13,7 +13,6 @@ interface IndexProps {
 
 const Index: React.FC<IndexProps> = ({data}) => {
     const setPageLoaded = useSetRecoilState(PageLoaded);
-    console.log(process.env.REACT_APP_API_KEY)
     useEffect(() => {
         setPageLoaded({
             pageLoaded: true

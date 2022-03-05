@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
-    background: #F9F9F9;
+    font-size: 13px;
     margin: 0 auto;
-    margin-top: 254px;
-    padding: 100px 256px 58px 256px;
+    margin-top: 200px;
+    padding: 100px 0 58px 0;
 `
 export const FooterDataItems = styled.div`
     display: flex;
@@ -13,6 +13,9 @@ export const FooterDataItems = styled.div`
 `
 
 export const FooterSubscribeWrapper = styled.div`
+    span {
+        font-size: 14px;
+    }
 
     div {
         margin-top: 30px;
@@ -46,6 +49,10 @@ export const FooterLanguagesWrapper = styled.div`
     height: 25px;
     position: relative;
 
+    span {
+        font-size: 13px;
+    }
+
     & > :first-child {
         &:before {
             content: '';
@@ -59,9 +66,15 @@ export const FooterLanguagesWrapper = styled.div`
     }
 `
 export const FooterWrapperItems = styled.div`
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 50px;
 `
 
 export const FooterIconWrapper = styled.div`
+    margin-right: 60px;
+
     & > :last-child {
         margin-top: 30px;
     }
@@ -74,9 +87,60 @@ export const FooterIconItem = styled.div`
     justify-content: space-between;
 
     h4 {
+        font-size: 14px;
         margin: 0;
+        font-weight: normal;
+    }
+
+    span {
+        color: #AAAAAA;
     }
 `
 
+
+export const Wkdslg = styled.div`
+    margin-left: 40%;
+`
+
 export const FooterContentItems = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &:first-child {
+        margin-left: 100px;
+    }
+    
+    
+
+    h4 {
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0 0 23px 0;
+    }
+
+
+
+`
+
+export const FooterSocialWrapper = styled.div`
+    text-align: right;
+
+    a {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    div {
+        span {
+            display: block;
+            color: #AAAAAA;
+            text-align: right;
+        }
+    }
+`
+
+export const FooterFooterText = styled.div`
+    margin-top: 90px;
+    padding: 0 400px;
+    color: #AAAAAA;
 `

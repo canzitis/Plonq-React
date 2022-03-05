@@ -4,9 +4,6 @@ export const Container = styled.div`
   font-family: Gotham Pro;
   font-style: normal;
   font-weight: normal;
-
-  max-width: 1406px;
-  margin: 0 auto;
   background: #8f8f8f;
   margin-top: 272px;
 `

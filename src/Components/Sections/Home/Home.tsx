@@ -1,4 +1,4 @@
-import {Container, HomeButtons, HomeInfo, HomeWrapper, ImageBox} from "./Home.styled";
+import {Container, HomeButtons, HomeInfo, HomeWrapper, ImageBox, WrapperContent} from "./Home.styled";
 import Image from 'next/image'
 import PlonqX from "../../Blocks/PlonqX/PlonqX";
 import PlonqProductCatalog from "../../Blocks/PlonqProductCatalog/PlonqProductCatalog";
@@ -49,10 +49,12 @@ const Home: React.FC<HomeProprs> = ({home}) => {
                 </HomeButtons>
             </HomeInfo>
         </HomeWrapper>
-        <PlonqX plonqX={home.plonqX}/>
-        <PlonqProductCatalog catalog={home.catalog}/>
-        <Map map={home.map}/>
-        <AboutProduct aboutProduct={home.aboutProduct}/>
+        <WrapperContent>
+            <PlonqX plonqX={home.plonqX}/>
+            <PlonqProductCatalog catalog={home.catalog}/>
+            <Map map={home.map}/>
+            <AboutProduct aboutProduct={home.aboutProduct}/>
+        </WrapperContent>
     </Container>
 }
 

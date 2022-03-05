@@ -4,11 +4,14 @@ export const Container = styled.div`
   font-family: Gotham Pro;
   font-style: normal;
   font-weight: normal;
-  max-width: 1406px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   margin-top: 32px;
+
+    &>:first-child{
+        margin-right: 32px;
+    }
 `
 
 export const AboutProductWrapperText = styled.div`
@@ -16,7 +19,7 @@ export const AboutProductWrapperText = styled.div`
   align-items: center;
   justify-content: center;
   background: #F9F9F9;
-  width: 688px;
+  width: 100%;
 
 
   div {

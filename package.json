@@ -2,12 +2,12 @@
   "name": "plonq",
   "private": true,
   "scripts": {
+    "serve": "concurrently \"npm run dev\" \"npm run mock\"",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "mock": "json-server -w  db.json -p 4200 -d 450",
-    "serve": "concurrently \"npm run dev\" \"npm run mock\""
+    "mock": "json-server -w  db.json -p 4200 -d 450"   
   },
   "dependencies": {
     "@react-google-maps/api": "^2.7.0",
