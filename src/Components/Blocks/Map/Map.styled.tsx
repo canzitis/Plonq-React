@@ -11,6 +11,7 @@ export const Container = styled.div`
 export const MapText = styled.div`
   background: #F9F9F9;
   width: 100%;
+    height: unset;
   text-align: center;
   padding-top: 36px;
   padding-bottom: 50px;
