@@ -10,6 +10,8 @@ const Preloader = () => {
     const pageLoaded = useRecoilValue(PageLoaded)
     const setPageLoaded = useSetRecoilState(PageLoaded);
 
+    const a =124;
+
 
     const ref = useRef() as MutableRefObject<HTMLDivElement>;
 
